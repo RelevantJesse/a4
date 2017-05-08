@@ -1,0 +1,24 @@
+body{
+  background-color: steelblue;
+}
+
+.maindiv{
+  width: 70%;
+  height: 100%;
+  margin: 0 auto;
+  background-color: lightblue;
+}
+
+.centerdiv{
+  text-align: center;
+}
+
+.innerdiv{
+  width:50%;
+  margin: 0 auto;
+  background-color: lightblue;
+}
+
+.spacer{
+   height: 50px;
+}

@@ -16,3 +16,6 @@ Route::get('/', function () {
 });
 
 Route::get("/equipment", "EquipmentController@index");
+
+Route::get("/equipment/new", "EquipmentController@addNewEquipment");
+Route::post("/equipment/new", "EquipmentController@saveNewEquipment");
