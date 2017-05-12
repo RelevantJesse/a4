@@ -11,7 +11,7 @@
 |
 */
 
-Route::get('/', "EventsController@index");
+Route::get('/', "EquipmentController@index");
 
 Route::get("/equipment", "EquipmentController@index");
 Route::get("/events", "EventsController@index");
