@@ -11,7 +11,11 @@ use Session;
 class EventsController extends Controller
 {
   public function index() {
-    dump("TESTING??????");
+    $allEvents = Event::all();
+
+    return view("events")->with([
+      "allEvents" => $allEvents,
+    ]);
   }
 
   /**
@@ -22,7 +26,7 @@ class EventsController extends Controller
     return view("events.new")->with([
       "types" => Type::all(),
       "equipment" => Equipment::orderBy("type_id", "ASC")->orderBy("model", "ASC")->orderBy("serial", "ASC")->get(),
-      "error" => ""
+      "error" => "",
     ]);
   }
 
@@ -72,7 +76,7 @@ class EventsController extends Controller
       "remainingEquipment" => $remainingEquipment,
       "requiredIds" => strlen($requiredIds) > 0 ? $requiredIds . "," : "",
       "event" => $event,
-      "error" => ""
+      "error" => "",
     ]);
   }
 
