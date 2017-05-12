@@ -17,7 +17,6 @@ class CreateEquipmentTable extends Migration
           $table->increments("id");
           $table->string("model");
           $table->string("serial");
-          $table->integer("type");
           $table->dateTime("checked_out")->nullable();
           $table->integer("checked_out_by")->nullable();
           $table->dateTime("checked_in")->nullable();

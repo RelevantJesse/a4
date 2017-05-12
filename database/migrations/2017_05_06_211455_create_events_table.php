@@ -21,6 +21,7 @@ class CreateEventsTable extends Migration
         $table->string("zip");
         $table->dateTime("event_date");
         $table->integer("contact_id");
+        $table->timestamps();
       });
     }
 

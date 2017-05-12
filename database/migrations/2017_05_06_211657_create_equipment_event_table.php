@@ -14,8 +14,10 @@ class CreateEquipmentEventTable extends Migration
     public function up()
     {
       Schema::create("equipment_event", function (Blueprint $table){
-        $table->integer("event_id");
-        $table->integer("equipment_id");
+        $table->integer("event_id")->unsigned();
+        $table->integer("equipment_id")->unsigned();
+        $table->foreign("event_id")->references("id")->on("events");
+        $table->foreign("equipment_id")->references("id")->on("equipment");
         $table->primary(['event_id', 'equipment_id']);
       });
     }
