@@ -11,11 +11,7 @@ use Session;
 class EventsController extends Controller
 {
   public function index() {
-    $allEvents = Event::all();
-
-    return view("events")->with([
-      "allEvents" => $allEvents
-    ]);
+    dump("TESTING??????");
   }
 
   /**
